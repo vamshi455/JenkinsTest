@@ -3,6 +3,7 @@
     [Name]              [dbo].[Name] NOT NULL,
     [ModifiedDate]      DATETIME     CONSTRAINT [DF_CountryRegion_ModifiedDate] DEFAULT (getdate()) NOT NULL,
     [New column] NCHAR(10) NULL, 
+    [new columns1] NCHAR(10) NULL, 
     CONSTRAINT [PK_CountryRegion_CountryRegionCode] PRIMARY KEY CLUSTERED ([CountryRegionCode] ASC)
 );
 
