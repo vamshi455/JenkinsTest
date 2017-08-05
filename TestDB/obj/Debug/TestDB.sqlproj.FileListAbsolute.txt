@@ -1,0 +1,19 @@
+C:\BI Projects\TestDB\TestDB\bin\Debug\TestDB.dacpac
+C:\BI Projects\TestDB\TestDB\bin\Debug\TestDB.dll
+C:\BI Projects\TestDB\TestDB\bin\Debug\TestDB.pdb
+C:\BI Projects\TestDB\TestDB\obj\Debug\TestDB.dll
+C:\BI Projects\TestDB\TestDB\obj\Debug\TestDB.pdb
+C:\BI Projects\TestDB\TestDB\obj\Debug\Model.xml
+C:\BI Projects\TestDB\TestDB\obj\Debug\refactor.xml
+C:\BI Projects\TestDB\TestDB\obj\Debug\postdeploy.sql
+C:\BI Projects\TestDB\TestDB\obj\Debug\predeploy.sql
+C:\BIProjects\TestDB\TestDB\bin\Debug\TestDB.dacpac
+C:\BIProjects\TestDB\TestDB\bin\Debug\TestDB.dll
+C:\BIProjects\TestDB\TestDB\bin\Debug\TestDB.pdb
+C:\BIProjects\TestDB\TestDB\obj\Debug\TestDB.sqlprojResolveAssemblyReference.cache
+C:\BIProjects\TestDB\TestDB\obj\Debug\Model.xml
+C:\BIProjects\TestDB\TestDB\obj\Debug\refactor.xml
+C:\BIProjects\TestDB\TestDB\obj\Debug\postdeploy.sql
+C:\BIProjects\TestDB\TestDB\obj\Debug\predeploy.sql
+C:\BIProjects\TestDB\TestDB\obj\Debug\TestDB.dll
+C:\BIProjects\TestDB\TestDB\obj\Debug\TestDB.pdb

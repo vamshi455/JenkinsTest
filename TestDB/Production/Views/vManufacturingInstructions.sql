@@ -1,0 +1,16 @@
+﻿
+CREATE VIEW [Production].[vManufacturingInstructions]
+AS
+SELECT ROW_NUMBER() OVER(ORDER BY [ProductModelID] DESC) AS ID, [ProductModelID], [Name] as [ProductName], 
+                  [Instructions].value(N'declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"; 
+        (/root/text())[1]',
+                   'nvarchar(max)') AS [Instructions], [MfgInstructions].ref.value('@LocationID[1]', 'int') AS [LocationID], [MfgInstructions].ref.value('@SetupHours[1]', 'decimal(9, 4)') 
+                  AS [SetupHours], [MfgInstructions].ref.value('@MachineHours[1]', 'decimal(9, 4)') AS [MachineHours], [MfgInstructions].ref.value('@LaborHours[1]', 'decimal(9, 4)') 
+                  AS [LaborHours], [MfgInstructions].ref.value('@LotSize[1]', 'int') AS [LotSize], [Steps].ref.value('string(.)[1]', 'nvarchar(1024)') AS [Step]
+FROM     [Production].[ProductModel] CROSS 
+                  APPLY[Instructions].nodes(N'declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"; 
+    /root/Location')
+                   MfgInstructions(ref) CROSS 
+                  APPLY[MfgInstructions].ref.nodes('declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"; 
+    step')
+                   Steps(ref); 
